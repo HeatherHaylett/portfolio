@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Image from 'react-bootstrap/Image';
 import mainImage from './Haylett.jpg';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Heather's portfolio</h1>
-        <img src={mainImage} alt="Heather smiling at the camera"></img>
+        <Image src={mainImage} rounded />
       </header>
     </div>
   );
