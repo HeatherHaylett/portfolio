@@ -28,9 +28,13 @@ class App extends React.Component {
         { title: 'Contact', path: '/contact' }
       ],
       home: {
-        title: 'title',
-        subtitle: 'subtitle',
-        text: 'landing page text'
+        title: 'Curious Intuitive Self-Starter',
+        subtitle: 'Software Engineer',
+        text: `Hi, I\'m Heather! A software engineer with a passion for full-stack applications.
+        I think systematically and excel in defining, structuring, and organizing data.
+        I write both frontend and backend code ensuring that an application
+        is optimized with a high quality user interface. I have a big picture focus and
+        never overlook the importance of understandable code.`
       },
       work: {
         title: 'my work',
