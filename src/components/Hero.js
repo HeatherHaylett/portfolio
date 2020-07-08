@@ -8,12 +8,10 @@ import Col from 'react-bootstrap/Col';
 function Hero(props) {
   return (
     <Row>
-      <Container d-flex>
-          <Col md={6}>
+      <Container>
             {props.title && <h1 className="display-1 font-weight-bolder">{props.title}</h1> }
             { props.subTitle && <h3 className="display-4 font-weight-light">{props.subTitle}</h3> }
-            { props.text && <h3 className="lead font-weight-light">{props.text}</h3> }
-          </Col>
+            { props.text && <h3 className="lead font-weight-light">{props.text}</h3> }          
       </Container>
     </Row>
   )
