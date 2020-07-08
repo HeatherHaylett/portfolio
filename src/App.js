@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   // Switch,
-  // Route,
+  Route,
   Link,
   // Prompt
 } from "react-router-dom";
@@ -12,7 +12,10 @@ import NavBar from 'react-bootstrap/NavBar';
 import Nav from 'react-bootstrap/Nav';
 import './App.scss';
 
-import Footer from '../src/components/Footer.js'
+import Footer from '../src/components/Footer.js';
+import HomePage from './pages/HomePage.js';
+import MyWorkPage from './pages/MyWorkPage.js';
+import ContactPage from './pages/ContactPage.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -49,9 +52,18 @@ class App extends React.Component {
               <Link className="nav-link" to='/'>Home</Link>
               <Link className="nav-link" to='/work'>My Work</Link>
               <Link className="nav-link" to='/contact'>Contact</Link>
-            </Nav>
-          </NavBar.Collapse>
-        </NavBar>
+              </Nav>
+            </NavBar.Collapse>
+          </NavBar>
+
+              <Route path='/' exact render={() =>
+                <HomePage title={this.state.home.title}
+                subTitle={this.state.home.subtitle}
+                text={this.state.home.text} /> }/>
+              <Route path='/work' render={() =>
+                <MyWorkPage title={this.state.work.title} /> }/>
+              <Route path='/contact' render={() =>
+                <ContactPage title={this.state.contact.title} /> }/>
         <Footer />
       </Container>
     </Router>
