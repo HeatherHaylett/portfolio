@@ -1,62 +1,59 @@
 import React from 'react';
-import './App.scss';
-//import Image from 'react-bootstrap/Image';
-//import mainImage from './Haylett.jpg';
-
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  // Switch,
+  // Route,
+  Link,
+  // Prompt
 } from "react-router-dom";
 
+import Container from 'react-bootstrap/Container';
+import NavBar from 'react-bootstrap/NavBar';
+import Nav from 'react-bootstrap/Nav';
+import './App.scss';
 
-export default function App() {
-  return (
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: 'Heather Haylett',
+      headerLinks: [
+        { title: 'Home', path: '/' },
+        { title: 'My Work', path: '/work' },
+        { title: 'Contact', path: '/contact' }
+      ],
+      home: {
+        title: 'title',
+        subtitle: 'subtitle',
+        text: 'landing page text'
+      },
+      work: {
+        title: 'my work',
+      },
+      contact: {
+        title: 'contact',
+      }
+    }
+  }
+  render() {
+    return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/myWork">My Work</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/myWork">
-            <MyWork />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Container className='p-0' fluid={true}>
+        <NavBar className='border-bottom' bg='transparent' expand='lg'>
+          <NavBar.Brand>Heather Haylett</NavBar.Brand>
+          <NavBar.Toggle className='border-0' aria-controls="navbar-toggle"/>
+          <NavBar.Collapse id="navbar-toggle">
+            <Nav className='ml-auto'>
+              <Link className="nav-link" to='/'>Home</Link>
+              <Link className="nav-link" to='/work'>My Work</Link>
+              <Link className="nav-link" to='/contact'>Contact</Link>
+            </Nav>
+          </NavBar.Collapse>
+        </NavBar>
+      </Container>
     </Router>
-  );
+    );
+  }
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function MyWork() {
-  return <h2>My Work</h2>;
-}
-
-function Contact() {
-  return <h2>Contact</h2>;
-}
-
-
+export default App;
