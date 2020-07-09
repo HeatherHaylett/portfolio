@@ -11,7 +11,7 @@ function footer() {
           <Col className='p-0' md={3} sm={12}>
             Heather Haylett
           </Col>
-          <Col className="p-0 d-flex='true' justify-content-end" md={3}>
+          <Col className="text-right p-0" md={3}>
             Site built from scratch by Heather
           </Col>
         </Row>
