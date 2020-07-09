@@ -16,6 +16,7 @@ import Footer from '../src/components/Footer.js';
 import HomePage from './pages/HomePage.js';
 import MyWorkPage from './pages/MyWorkPage.js';
 import ContactPage from './pages/ContactPage.js';
+import PDFViewer from './pages/PDFViewer.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,14 +26,15 @@ class App extends React.Component {
       headerLinks: [
         { title: 'Home', path: '/' },
         { title: 'My Work', path: '/work' },
-        { title: 'Contact', path: '/contact' }
+        { title: 'Contact', path: '/contact' },
+        { title: 'Resume', path: '/resume' }
       ],
       home: {
         title: 'Curious Intuitive Self-Starter',
         subtitle: 'Software Engineer',
-        text: `Hi, I\'m Heather! A software engineer with a passion for full-stack applications.
+        text: `Hi, I'm Heather! A software engineer with a passion for full-stack applications.
         I think systematically and excel in defining, structuring, and organizing data.
-        I write both frontend and backend code ensuring that an application
+        I write both front-end and back-end code ensuring that an application
         is optimized with a high quality user interface. I have a big picture focus and
         never overlook the importance of understandable code.`
       },
@@ -41,6 +43,9 @@ class App extends React.Component {
       },
       contact: {
         title: 'contact',
+      },
+      resume: {
+        title: 'resume',
       }
     }
   }
@@ -55,6 +60,7 @@ class App extends React.Component {
             <Nav className='ml-auto'>
               <Link className="nav-link" to='/'>Home</Link>
               <Link className="nav-link" to='/work'>My Work</Link>
+              <Link className="nav-link" to='/resume'>Resume</Link>
               <Link className="nav-link" to='/contact'>Contact</Link>
               </Nav>
             </NavBar.Collapse>
@@ -66,6 +72,8 @@ class App extends React.Component {
                 text={this.state.home.text} /> }/>
               <Route path='/work' render={() =>
                 <MyWorkPage title={this.state.work.title} /> }/>
+              <Route path='/resume' render={() =>
+                <PDFViewer title={this.state.resume.title} /> }/>
               <Route path='/contact' render={() =>
                 <ContactPage title={this.state.contact.title} /> }/>
         <Footer />
