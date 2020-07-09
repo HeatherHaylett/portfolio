@@ -2,7 +2,7 @@ import React from 'react';
 
 function MyWorkPage(props) {
   return (
-    <div>my work page works</div>
+    <div>Coming soon!</div>
   )
 }
 
