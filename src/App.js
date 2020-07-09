@@ -31,8 +31,8 @@ class App extends React.Component {
       ],
       home: {
         title: 'Curious Intuitive Self-Starter',
-        subtitle: 'Software Engineer',
-        text: `Hi, I'm Heather! A software engineer with a passion for full-stack applications.
+        subtitle: `Hi, I'm Heather!`,
+        text: `A software engineer with a passion for full-stack applications.
         I think systematically and excel in defining, structuring, and organizing data.
         I write both front-end and back-end code ensuring that an application
         is optimized with a high quality user interface. I have a big picture focus and
