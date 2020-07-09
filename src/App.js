@@ -1,10 +1,8 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  // Switch,
   Route,
   Link,
-  // Prompt
 } from "react-router-dom";
 
 import Container from 'react-bootstrap/Container';
@@ -15,7 +13,6 @@ import './App.scss';
 import Footer from '../src/components/Footer.js';
 import HomePage from './pages/HomePage.js';
 import MyWorkPage from './pages/MyWorkPage.js';
-import ContactPage from './pages/ContactPage.js';
 import PDFViewer from './pages/PDFViewer.js';
 
 class App extends React.Component {
@@ -26,7 +23,6 @@ class App extends React.Component {
       headerLinks: [
         { title: 'Home', path: '/' },
         { title: 'My Work', path: '/work' },
-        { title: 'Contact', path: '/contact' },
         { title: 'Resume', path: '/resume' }
       ],
       home: {
@@ -40,9 +36,6 @@ class App extends React.Component {
       },
       work: {
         title: 'my work',
-      },
-      contact: {
-        title: 'contact',
       },
       resume: {
         title: 'resume',
@@ -61,7 +54,6 @@ class App extends React.Component {
               <Link className="nav-link" to='/'>Home</Link>
               <Link className="nav-link" to='/work'>My Work</Link>
               <Link className="nav-link" to='/resume'>Resume</Link>
-              <Link className="nav-link" to='/contact'>Contact</Link>
               </Nav>
             </NavBar.Collapse>
           </NavBar>
@@ -74,8 +66,6 @@ class App extends React.Component {
                 <MyWorkPage title={this.state.work.title} /> }/>
               <Route path='/resume' render={() =>
                 <PDFViewer title={this.state.resume.title} /> }/>
-              <Route path='/contact' render={() =>
-                <ContactPage title={this.state.contact.title} /> }/>
         <Footer />
       </Container>
     </Router>
