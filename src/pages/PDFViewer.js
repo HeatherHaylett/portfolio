@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Pdf from '../assets/Resume-Portfolio.pdf';
 
-export default class PDFViewer extends React.Component {
+class PDFViewer extends Component {
 
   render() {
+
     return (
-      <div id='viewer' style={{ width: '100%', height: '100%' }}>
-        Hello world!
+      <div className = "App">
+        <a href = {Pdf} target = "_blank" rel="noopener noreferrer">Download Pdf</a>
       </div>
-    )
+    );
   }
 }
+
+export default PDFViewer;
