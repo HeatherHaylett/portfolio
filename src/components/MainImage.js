@@ -11,7 +11,7 @@ import mainImage from '../assets/Haylett.jpg'
 function MainImage() {
   return (
     <Row>
-      <Container d-flex>
+      <Container d-flex='true'>
           <Col md={6}>
             <Image src={mainImage} className='g-card-image'/>
           </Col>
