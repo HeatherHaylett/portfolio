@@ -13,7 +13,7 @@ import doodleSS from '../assets/MyWork/doodleSS.png';
 import Exhibit from './Exhibit.js';
 
 class Gallery extends React.Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.state = {
         items: [
@@ -23,6 +23,7 @@ class Gallery extends React.Component {
                 subTitle: 'A place to jam with friends',
                 imgSrc: ensembleImg,
                 screenShot: ensembleSS,
+                description: ``,
                 selected: false
             },
             {
@@ -31,6 +32,7 @@ class Gallery extends React.Component {
                 subTitle: 'Throw an online party to chat and play a game',
                 imgSrc: howdyImg,
                 screenShot: howdySS,
+                description: ``,
                 selected: false
             },
             {
@@ -39,6 +41,7 @@ class Gallery extends React.Component {
                 subTitle: `Draw on pictures you've uploaded`,
                 imgSrc: doodlgeImg,
                 screenShot: doodleSS,
+                description: ``,
                 selected: false
             },
         ]
@@ -48,7 +51,7 @@ class Gallery extends React.Component {
 createExhibit = (exhibitItem) => {
   let items = [...this.state.items];
   return items.map(exhibitItem => {
-      return <Exhibit item={exhibitItem} key={exhibitItem.id} />
+    return <Exhibit item={exhibitItem} key={exhibitItem.id} />
   })
 }
 
