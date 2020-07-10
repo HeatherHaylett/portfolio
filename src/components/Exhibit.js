@@ -17,7 +17,8 @@ function Exhibit(props) {
               <Figure.Image
                 width={100}
                 height={'auto'}
-                alt="171x180"
+                align={'center'}
+                alt={props.item.title}
                 src={props.item.imgSrc}
               />
               <Accordion defaultActiveKey="0">
@@ -27,7 +28,7 @@ function Exhibit(props) {
                   </Figure.Caption>
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="1">
-                  <p>Hello! I'm the body</p>
+                  <p>{props.item.description}</p>
                 </Accordion.Collapse>
               </Accordion>
             </Figure>
