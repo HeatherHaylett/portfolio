@@ -23,7 +23,10 @@ class Gallery extends React.Component {
                 subTitle: 'A place to jam with friends',
                 imgSrc: ensembleImg,
                 screenShot: ensembleSS,
-                description: ``,
+                description: `I created an inbox notification system for Ensemble with GraphQL backed by Postgres.
+                In the inbox I implemented a direct message system with Vue Bootstrap with a focus on intuitive UI.
+                I was resposnible for deploying Ensemble to Azure to deliver the application into a production environment. 
+                `,
                 selected: false
             },
             {
@@ -32,7 +35,10 @@ class Gallery extends React.Component {
                 subTitle: 'Throw an online party to chat and play a game',
                 imgSrc: howdyImg,
                 screenShot: howdySS,
-                description: ``,
+                description: `Working on Howdy I designed and built the applications RESTful API using Express.js.
+                I also integrated geolocation to customize content shown based on location and distance which
+                included creating a permission system to restrict access based on physical location.
+                `,
                 selected: false
             },
             {
@@ -41,7 +47,10 @@ class Gallery extends React.Component {
                 subTitle: `Draw on pictures you've uploaded`,
                 imgSrc: doodlgeImg,
                 screenShot: doodleSS,
-                description: ``,
+                description: `I created real time messaging on top of WebSockets for Doodle Society.
+                This included implementing a front-end user interface using modular React components
+                which ensured a clean live chat layout created with CSS and Bootstrap.
+                `,
                 selected: false
             },
         ]
