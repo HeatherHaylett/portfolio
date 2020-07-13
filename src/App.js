@@ -26,9 +26,9 @@ class App extends React.Component {
         { title: 'Resume', path: '/resume' }
       ],
       home: {
-        title: 'Curious Intuitive Self-Starter',
+        title: `Curious\n Intuitive\n Self-Starter`,
         subtitle: `Hi, I'm Heather!`,
-        text: `A software engineer with a passion for full-stack applications.
+        text: `A software engineer with a passion for full-stack applications.\n
         I think systematically and excel in defining, structuring, and organizing data.
         I write both front-end and back-end code ensuring that an application
         is optimized with a high quality user interface. I have a big picture focus and
