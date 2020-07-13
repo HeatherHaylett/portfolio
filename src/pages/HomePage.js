@@ -13,11 +13,11 @@ import MainImage from '../components/MainImage.js';
 function HomePage(props) {
   return (
     <Container>
-      <Row>
-        <Col className="d-flex justify-content-center" md={8}>
+      <Row xs={1} md={2}>
+        <Col className="d-flex justify-content-center" >
           <Hero title={props.title} subTitle={props.subTitle} text={props.text}/>
         </Col>
-        <Col className="d-flex justify-content-center" md={8}>< MainImage /></Col>
+        <Col className="d-flex justify-content-center" >< MainImage /></Col>
       </Row>
     </Container>
   )
