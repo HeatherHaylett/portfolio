@@ -12,7 +12,7 @@ import Button from 'react-bootstrap/Button';
 function Exhibit(props) {
   return(
       <Container >
-        <Row className='align-items-start m-30'>
+        <Row className='align-items-start m-30' xs={1} md={2}>
           <Col md={3} >
             <Image
               width={75}
