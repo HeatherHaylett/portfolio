@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 //import Jumbotron from 'react-bootstrap/Jumbotron';
 
-import mainImage from '../assets/Haylett.jpg'
+import mainImage from '../assets/Haylett2.jpg'
 
 function MainImage() {
   return (
